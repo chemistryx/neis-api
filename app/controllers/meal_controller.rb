@@ -1,5 +1,4 @@
 require 'open-uri'
-require 'action_view'
 
 class MealController < ApplicationController
     def index
