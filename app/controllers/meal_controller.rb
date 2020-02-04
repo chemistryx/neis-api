@@ -11,7 +11,7 @@ class MealController < ApplicationController
         year = params[:year]
         month = params[:month]
         begin
-            render json: {status: true, schoolCode: schoolCode, schoolStage: schoolStage, year: year, month: month, meal: fetch(schoolCode, schoolStage, year, month)}
+            render json: {status: true, schoolCode: schoolCode, schoolStage: schoolStage, year: year, month: month, menu: fetch(schoolCode, schoolStage, year, month)}
         rescue => e
             render json: {status: false, message: e.to_s}    
         end
@@ -59,11 +59,9 @@ class MealController < ApplicationController
             unless (date.empty?)
                 data << {
                     date: date.to_i,
-                    menu: [
-                        breakfast: breakfast,
-                        lunch: lunch,
-                        dinner: dinner
-                    ]
+                    breakfast: breakfast,
+                    lunch: lunch,
+                    dinner: dinner
                 }
             end
         end
