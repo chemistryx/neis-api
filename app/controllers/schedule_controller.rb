@@ -1,6 +1,8 @@
 require 'open-uri'
 
 class ScheduleController < ApplicationController
+    include NeisHelper
+
     def index
         render json: {status: true}
     end
@@ -25,27 +27,7 @@ class ScheduleController < ApplicationController
         raise "Invalid school stage speficied." unless schoolStage.match(/^[2-4]$/)
         raise "Invalid year speficied." unless year.match(/^\d{4}$/)
         raise "Invalid month speficied." unless month.match(/^\d{2}$/)
-        # Use hashrockets to get values with string
-        regionIdentifier = {
-            'B' => "sen",
-            'C' => "pen",
-            'D' => "dge",
-            'E' => "ice",
-            'F' => "gen",
-            'G' => "dje",
-            'H' => "use",
-            'I' => "sje",
-            'J' => "goe",
-            'K' => "kwe",
-            'M' => "cbe",
-            'N' => "cne",
-            'P' => "jbe",
-            'Q' => "jne",
-            'R' => "gbe",
-            'S' => "gne",
-            'T' => "jje",
-        }
-        schoolRegion = regionIdentifier[schoolCode[0, 1]]
+        schoolRegion = get_identifier(schoolCode)
         document = Nokogiri::HTML(open("https://stu.#{schoolRegion}.go.kr/sts_sci_sf01_001.do?schulCode=#{schoolCode}&schulCrseScCode=#{schoolStage}&schulKndScCode=0#{schoolStage}&ay=#{year}&mm=#{month}"))
         parsed = document.css('.tbl_calendar tbody tr td div')
         data = []
