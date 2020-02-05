@@ -43,7 +43,7 @@ class MealController < ApplicationController
                     date: date.to_i,
                     breakfast: breakfast,
                     lunch: lunch,
-                    dinner: dinner,
+                    dinner: dinner
                 }
             end
         end
