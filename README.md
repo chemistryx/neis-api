@@ -2,6 +2,10 @@
 
 [나이스](https://www.neis.go.kr/) 학생서비스 페이지를 파싱하여 JSON API로 제공하는 서비스입니다.
 
+## 기본 URL
+
+https://api.chemistryx.me/neis
+
 ## 급식 불러오기
 
 ### 요청
@@ -67,6 +71,8 @@
 ```
 
 ## 설치하기
+
+`참고` [Ruby 2.5](https://www.ruby-lang.org)이상이 설치되어 있어야 합니다.
 
 ```
 bundle install
