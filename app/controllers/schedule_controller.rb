@@ -24,9 +24,9 @@ class ScheduleController < ApplicationController
     def fetch(schoolCode, schoolStage, year, month)
         # params validation
         raise "Invalid school code specified." unless schoolCode.match(/[A-Z]\d{9}/)
-        raise "Invalid school stage speficied." unless schoolStage.match(/^[2-4]$/)
-        raise "Invalid year speficied." unless year.match(/^\d{4}$/)
-        raise "Invalid month speficied." unless month.match(/^\d{2}$/)
+        raise "Invalid school stage specified." unless schoolStage.match(/^[2-4]$/)
+        raise "Invalid year specified." unless year.match(/^\d{4}$/)
+        raise "Invalid month specified." unless month.match(/^\d{2}$/)
         schoolRegion = get_identifier(schoolCode)
         document = Nokogiri::HTML(open("https://stu.#{schoolRegion}.go.kr/sts_sci_sf01_001.do?schulCode=#{schoolCode}&schulCrseScCode=#{schoolStage}&schulKndScCode=0#{schoolStage}&ay=#{year}&mm=#{month}"))
         parsed = document.css('.tbl_calendar tbody tr td div')
