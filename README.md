@@ -23,19 +23,19 @@ https://api.chemistryx.me/neis
 
 ```json
 {
-    "status": true,
-    "schoolCode": "X000000000",
-    "schoolStage": "0",
-    "year": "2020",
-    "month": "02",
-    "menu": [
-        {
-            "date": 1,
-            "breakfast": null,
-            "lunch": ["현미밥(고)", "쇠고기감자국(고)", "포크커틀렛(고)", "꼬마새송이버섯볶음", "야채쫄면무침(고)", "배추김치(고)", "된장소스(고)", "키위"],
-            "dinner": null
-        }
-    ]
+  "status": true,
+  "schoolCode": "X000000000",
+  "schoolStage": "0",
+  "year": "2020",
+  "month": "02",
+  "menu": [
+    {
+      "date": 1,
+      "breakfast": [],
+      "lunch": ["현미밥(고)", "쇠고기감자국(고)", "포크커틀렛(고)", "꼬마새송이버섯볶음", "야채쫄면무침(고)", "배추김치(고)", "된장소스(고)", "키위"],
+      "dinner": []
+    }
+  ]
 }
 ```
 
@@ -56,17 +56,17 @@ https://api.chemistryx.me/neis
 
 ```json
 {
-    "status": true,
-    "schoolCode": "X000000000",
-    "schoolStage": "0",
-    "year": "2020",
-    "month": "02",
-    "schedule": [
-        {
-            "date": 1,
-            "content": ["여름방학"]
-        }
-    ]
+  "status": true,
+  "schoolCode": "X000000000",
+  "schoolStage": "0",
+  "year": "2020",
+  "month": "02",
+  "schedule": [
+    {
+      "date": 1,
+      "content": ["여름방학"]
+    }
+  ]
 }
 ```
 

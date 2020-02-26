@@ -41,9 +41,9 @@ class MealController < ApplicationController
             unless (date.empty?)
                 data << {
                     date: date.to_i,
-                    breakfast: breakfast,
-                    lunch: lunch,
-                    dinner: dinner
+                    breakfast: breakfast.nil? ? [] : breakfast,
+                    lunch: lunch.nil? ? [] : lunch,
+                    dinner: dinner.nil? ? [] : dinner
                 }
             end
         end

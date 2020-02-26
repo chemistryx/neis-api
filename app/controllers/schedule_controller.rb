@@ -38,7 +38,7 @@ class ScheduleController < ApplicationController
             unless (date.empty?)
                 data << {
                     date: date.to_i,
-                    content: content.empty? ? nil : content
+                    content: content.empty? ? [] : content
                 }
             end
         end
