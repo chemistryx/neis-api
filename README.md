@@ -1,4 +1,4 @@
-# neis-api
+# neis-api ![](https://github.com/ChemistryX/neis-api/workflows/deploy-prod/badge.svg)
 
 [나이스](https://www.neis.go.kr/) 학생서비스 페이지를 파싱하여 JSON API로 제공하는 서비스입니다.
 
