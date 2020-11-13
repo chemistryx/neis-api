@@ -2,6 +2,10 @@
 
 [나이스](https://www.neis.go.kr/) 학생서비스 페이지를 파싱하여 JSON API로 제공하는 서비스입니다.
 
+# Deprecated
+나이스 공식 OpenAPI를 이용해주세요
+https://open.neis.go.kr
+
 ## 기본 URL
 
 https://api.chemistryx.me/neis
